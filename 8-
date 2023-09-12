@@ -1,0 +1,18 @@
+// Programa java para calcular si un número entero es múltiplo de dos o de tres.
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        int num;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Introduzca un número: ");
+        num = sc.nextInt();
+
+
+        if (num % 2 == 0) {
+            System.out.println("El número ingresado es múltiplo de dos");
+        }
+        if (num % 3 == 0) {
+            System.out.println("El número ingresado es múltiplo de tres");
+        }
+    }
+}
