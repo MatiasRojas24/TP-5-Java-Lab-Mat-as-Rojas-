@@ -1,0 +1,26 @@
+// Programa que lea dos números enteros positivos N y M y muestre los múltiplos de N que hay desde 1 hasta M.
+// Por ejemplo si N = 4 y M = 500 el programa mostrará los múltiplos de 4 desde 1 hasta 500.
+// El valor de N deberá ser menor que el valor de M. Si no se introducen valores válidos para N o M se mostrará el mensaje correspondiente y
+// se vuelven a pedir.
+
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        int N, M, i;
+        Scanner sc = new Scanner(System.in);
+        do {
+            System.out.print("Ingrese el primer número: ");
+            N = sc.nextInt();
+            System.out.print("Ingrese el segundo número: ");
+            M = sc.nextInt();
+            if (N > M){System.out.println("El primer número debe ser menor al segundo");}
+            if (N < 0 || M < 0){System.out.println("Ingrese solo números positivos");}
+        }
+        while (N < 0 || M < 0 || N > M);
+
+        System.out.println("Números múltiplos de "+N+" desde 1 hasta "+M);
+        for (i = 1; i <= M; i += 1) {
+        if (i % N == 0){System.out.println(i);}
+        }
+    }
+}
