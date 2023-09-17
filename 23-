@@ -1,0 +1,11 @@
+// Ejemplo de uso de for. Programa Java que muestre los números del 100 al 1 utilizando la instrucción for.
+
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        int i;
+        for (i = 100; i >= 1; i -= 1){
+            System.out.println(i);
+        }
+    }
+}
