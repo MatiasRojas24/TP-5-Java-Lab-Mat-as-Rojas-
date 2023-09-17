@@ -17,7 +17,7 @@ public class Main {
             i += 1;
         }
         i = 1;
-        System.out.println("Números de 1 hasta "+n+" con while: ");
+        System.out.println("Números de 1 hasta "+n+" con do-while: ");
         do{
             System.out.println(i);
             i += 1;
