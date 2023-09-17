@@ -1,0 +1,28 @@
+// Programa que pida que se introduzcan dos números enteros por teclado y muestre los números desde el menor hasta el mayor de los
+// números introducidos. Los dos números introducidos deben ser distintos. Si son iguales se mostrará un mensaje indicándolo y se
+// vuelven a introducir.
+
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        int n1, n2, i;
+        int may,men;
+        Scanner sc = new Scanner(System.in);
+        do {
+            System.out.print("Ingrese el primer número: ");
+            n1 = sc.nextInt();
+            System.out.print("Ingrese el segundo número: ");
+            n2 = sc.nextInt();
+            if (n1 == n2){System.out.println("Ingrese números distintos");}
+        }
+        while (n1 == n2);
+        
+        if (n1 > n2){may = n1; men = n2;}
+        else {may = n2; men = n1;}
+        
+        System.out.println("Números desde "+men+" hasta "+may);
+        for (i = men; i <= may; i += 1) {
+        System.out.println(i);
+        }
+    }
+}
