@@ -1,29 +1,65 @@
-// Programa que lea por teclado tres números enteros H, M, S correspondientes a hora, minutos
-// y segundos respectivamente, y comprueba si la hora que indican es una hora válida.
+// Programa que lea una variable entera mes y compruebe si el valor corresponde a un mes de
+// 30 días, de 31 o de 28. Supondremos que febrero tiene 28 días. Se mostrará además el nombre del mes.
+// Se debe comprobar que el valor introducido esté comprendido entre 1 y 12
 import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
-        int h, m, s;
+        int mes, dmes;
         Scanner sc = new Scanner(System.in);
-        System.out.print("Ingrese las horas: ");
-        h = sc.nextInt();
-        System.out.print("Ingrese los minutos: ");
-        m = sc.nextInt();
-        System.out.print("Ingrese los segundos: ");
-        s = sc.nextInt();
-        if (h <= 24 && h >= 1){
-            if (m <= 60 && m >= 0){
-                if(s <= 60 && s >= 0){
-                    System.out.println("La hora ingresada ("+h+":"+m+":"+s+") es una hora válida");
-                }
-                else {
-                    System.out.println("Los segundos ingresados no son válidos");
-                }
+        System.out.print("Ingrese un número correspondiente a un mes (del 1 al 12): ");
+        mes = sc.nextInt();
+
+        if (mes >= 1 && mes <= 12){
+            if (mes == 1 || mes == 3 || mes == 5 || mes == 7 || mes == 8 || mes == 10 || mes == 12){
+                dmes = 31;
+            }
+            else if (mes == 4 || mes == 6 || mes == 9 || mes == 11) {
+                dmes = 30;
             }
             else {
-                System.out.println("Los minutos ingresados no son válidos");
+                dmes = 28;
+            }
+            switch (mes){
+                case 1:
+                    System.out.println("El mes '"+mes+"' es Enero con "+dmes+" días");
+                    break;
+                case 2:
+                    System.out.println("El mes '"+mes+"' es Febrero con "+dmes+" días");
+                    break;
+                case 3:
+                    System.out.println("El mes '"+mes+"' es Marzo con "+dmes+" días");
+                    break;
+                case 4:
+                    System.out.println("El mes '"+mes+"' es Abril con "+dmes+" días");
+                    break;
+                case 5:
+                    System.out.println("El mes '"+mes+"' es Mayo con "+dmes+" días");
+                    break;
+                case 6:
+                    System.out.println("El mes '"+mes+"' es Junio con "+dmes+" días");
+                    break;
+                case 7:
+                    System.out.println("El mes '"+mes+"' es Julio con "+dmes+" días");
+                    break;
+                case 8:
+                    System.out.println("El mes '"+mes+"' es Agosto con "+dmes+" días");
+                    break;
+                case 9:
+                    System.out.println("El mes '"+mes+"' es Septiembre con "+dmes+" días");
+                    break;
+                case 10:
+                    System.out.println("El mes '"+mes+"' es Octubre con "+dmes+" días");
+                    break;
+                case 11:
+                    System.out.println("El mes '"+mes+"' es Noviembre con "+dmes+" días");
+                    break;
+                case 12:
+                    System.out.println("El mes '"+mes+"' es Diciembre con "+dmes+" días");
+                    break;
             }
         }
-        else{
-            System.out.println("Las horas ingresadas no son válidas");
+        else {
+            System.out.println("El mes ingresado no es válido");
         }
+    }
+}
