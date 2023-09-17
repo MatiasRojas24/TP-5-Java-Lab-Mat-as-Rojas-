@@ -1,0 +1,23 @@
+// Programa Java que convierte millas a kilómetros. El programa pide que se introduzca una cantidad de millas y calcula y muestra
+// su equivalente en Kilómetros. El proceso se repite hasta que se introduzca un 0 como valor para las millas.
+// 1 Milla equivale a 1.6093 Kilómetros.
+// El valor de los KM resultantes se debe mostrar con dos decimales.
+// Para pasar de millas a Km realizaremos la operación:
+// Km = millas * 1.6093
+
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        int m;
+        String km;
+        Scanner sc = new Scanner(System.in);
+        do {
+            System.out.print("Ingrese una distancia en millas (ingrese un 0 para terminar): ");
+            m = sc.nextInt();
+            if(m == 0){break;}
+            km = String.format("%.2f", m * 1.6093);
+            System.out.println("La distancia ingresada equivale a "+km+" kilómetros");
+        }
+        while (m != 0);
+    }
+}
