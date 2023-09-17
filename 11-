@@ -1,0 +1,16 @@
+11. // Programa java que lea un carácter por teclado y compruebe si es un dígito numérico (cifra entre 0 y 9
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        char caracter;
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Ingrese un carácter: ");
+        caracter = sc.next().charAt(0);
+        if (caracter >= 48 && caracter <= 57){
+            System.out.print("El carácter ingresado es un dígito numérico");
+        }
+        else{
+            System.out.print("El carácter ingresado NO es un dígito numérico");
+        }
+        }
+    }
